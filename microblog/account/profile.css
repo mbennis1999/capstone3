@@ -1,0 +1,111 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #ffffff;
+  margin: 0;
+  padding: 0;
+}
+
+/* Header Styles */
+header {
+  background-color: #1da1f2;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header nav a, header nav button {
+  color: #373434;
+  text-decoration: none;
+  font-size: 16px;
+  
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+header nav a:hover, header nav button:hover {
+  text-decoration: underline;
+}
+
+/* Main Section Styles */
+main {
+  padding: 2px;
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+h1 {
+  color: #1da1f2;
+  text-align: center;
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+/* Profile Section Styles */
+#profile {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#profile div {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid #000000;
+}
+
+#profile div:last-child {
+  border-bottom: none;
+}
+
+#profile label {
+  font-weight: bold;
+  color: #657786;
+}
+
+#profile span {
+  color: #14171a;
+}
+
+/* Button Styles */
+#postlink {
+  font-size: 20px;
+  padding: 5px 15px;
+  border-radius: 30px;
+  background-color: #1da1f2;
+  border: 1px solid #1da1f2;
+  color: rgb(255, 247, 247);
+  font-weight: bold;
+}
+
+#logoutlink {
+  font-size: 20px;
+  padding: 5px 15px;
+  border-radius: 30px;
+  background-color: rgb(255, 255, 255);
+  border: 1px solid #1da1f2;
+  color: #1da1f2;
+  font-weight: bold;
+}
+
+#logoutlink:hover, #postlink:hover {
+  background-color: #0d8ddb;
+}
+
+/* Footer Styles */
+footer {
+  background-color: #1da1f2;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  padding: 10px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
