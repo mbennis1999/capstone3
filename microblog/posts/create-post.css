@@ -8,7 +8,7 @@ body {
 }
 
 header {
-  background-color: #007BFF;
+  background-color: #1480f4df;
   color: white;
   padding: 10px 20px;
   display: flex;
@@ -67,7 +67,7 @@ textarea {
 }
 
 button[type="submit"] {
-  background-color: #007BFF;
+  background-color: #007bffcc;
   color: white;
   border: none;
   padding: 10px;
@@ -76,12 +76,12 @@ button[type="submit"] {
 }
 
 button[type="submit"]:hover {
-  background-color: #0056b3;
+  background-color: #0057b3d3;
 }
 
 footer {
   text-align: center;
   padding: 20px;
-  background: #007BFF;
+  background: #007bffd3;
   color: white;
 }

@@ -10,39 +10,51 @@ body {
 header {
   background-color: #1da1f2;
   padding: 10px 20px;
+}
+
+nav {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start; /* Align items to the left */
   align-items: center;
 }
 
-header nav a, header nav button {
-  color: #373434;
+nav a, nav button {
+  color: #ffffff;
   text-decoration: none;
   font-size: 16px;
-  
-  background: none;
   border: none;
+  background: none;
   cursor: pointer;
+  margin-right: 20px; /* Adjust spacing between links */
 }
 
-header nav a:hover, header nav button:hover {
+nav a:hover, nav button:hover {
+  text-decoration: underline;
+}
+
+button {
+  color: #ffffff;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 5px 10px;
+}
+
+button:hover {
   text-decoration: underline;
 }
 
 /* Main Section Styles */
 main {
-  padding: 2px;
-  max-width: 600px;
-  margin: 0 auto;
-  background-color: #ffffff;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  padding: 20px;
+  background-color: #f5f8fa;
+  min-height: calc(100vh - 50px); /* Adjust height considering header/footer */
 }
 
 h1 {
+  font-size: 24px;
   color: #1da1f2;
-  text-align: center;
-  font-size: 2em;
   margin-bottom: 20px;
 }
 
@@ -72,31 +84,6 @@ h1 {
 
 #profile span {
   color: #14171a;
-}
-
-/* Button Styles */
-#postlink {
-  font-size: 20px;
-  padding: 5px 15px;
-  border-radius: 30px;
-  background-color: #1da1f2;
-  border: 1px solid #1da1f2;
-  color: rgb(255, 247, 247);
-  font-weight: bold;
-}
-
-#logoutlink {
-  font-size: 20px;
-  padding: 5px 15px;
-  border-radius: 30px;
-  background-color: rgb(255, 255, 255);
-  border: 1px solid #1da1f2;
-  color: #1da1f2;
-  font-weight: bold;
-}
-
-#logoutlink:hover, #postlink:hover {
-  background-color: #0d8ddb;
 }
 
 /* Footer Styles */

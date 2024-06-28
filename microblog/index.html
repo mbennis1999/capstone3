@@ -1,46 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
+    
     <!-- Global CSS (CSS rules you want applied to all pages) -->
     <link rel="stylesheet" href="global.css" />
-
+    
     <!-- Page-specific CSS -->
     <link rel="stylesheet" href="index.css" />
-
+    
     <title>Login to the Microblog Network!</title>
-  </head>
-  <body>
+</head>
+<body>
     <header>
-      <nav>
-        <span id="greetingSpan">Welcome</span>
-    <a id="registerLink" href="account/register.html">Register</a>
-    <a id="loginLink" href="account/login.html">Login</a>
-    </nav>
+        <nav>
+            <span id="greetingSpan">Welcome</span>
+            <a id="loginLink" href="account/login.html">Login</a>
+        </nav>
     </header>
-
+    
     <main>
-      <h4>Welcome to the Microblog Network!</h4>
+        <h4>Welcome to the Microblog Network!</h4>
         <h6>Welcome to Your Microblog Network! Join our vibrant community where you can share your thoughts, connect with others, and explore diverse perspectives. Whether you're here to express your passions, reflect on daily moments, or discover new ideas, start sharing your story with us today. Register now to join the fun and be part of our growing community!</h6>
+        <div class="auth-links">
+            <a id="registerLink" href="account/register.html">Register</a>
+            <a id="loginLink" href="account/login.html">Login</a>
+        </div>
     </main>
-
+    
     <footer>Enjoy Your Stay</footer>
-
+    
     <script src="account/auth.js"></script>
     <script>
-      const loginLink = document.querySelector("#loginLink");
-      const greetingSpan = document.querySelector("#greetingSpan");
-      if (isLoggedIn() == true) {
-        loginLink.style.display = "none";
-      } else {
-        greetingSpan.style.display = "none";
-      }
+        const loginLink = document.querySelector("#loginLink");
+        const greetingSpan = document.querySelector("#greetingSpan");
+        if (isLoggedIn() === true) {
+            loginLink.style.display = "none";
+        } else {
+            greetingSpan.style.display = "none";
+        }
     </script>
     <!-- Page-specific code -->
-
     <script src="index.js"></script>
-  </body>
+</body>
 </html>

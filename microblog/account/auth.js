@@ -47,7 +47,6 @@ function login(loginData) {
     });
 }
 
-
 // Function that allows a new user to register for a profile
 function register(registerData) {
   // POST /api/users
@@ -62,15 +61,13 @@ function register(registerData) {
     body: JSON.stringify(registerData),
   };
 
-  return fetch(apiBaseURL + "/api/users", options)
-  .then((response) => response.json())
-  .then((registerData) => {
-    window.location.assign("../account/login.html"); // redirect
-    return registerData;
-  });
+  fetch(apiBaseURL + "/api/users", options)
+    .then((response) => response.json())
+    .then((registerData) => {
+      window.location.assign("../account/login.html"); // redirect
+      return registerData;
+    });
 }
-
-
 
 // This is the `logout()` function you will use for any logout button
 // which you may include in various pages in your app. Again, READ this

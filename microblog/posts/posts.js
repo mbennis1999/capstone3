@@ -1,43 +1,31 @@
-/* Posts Page JavaScript */
-
 "use strict";
 
-// Function that allows a new user to register for a profile
-function getPosts(username) {
-    // POST /api/users/{username}
-
+// Function to get posts from the API
+function getPosts() {
     const token = getLoginData().token;
     const options = {
-      method: "GET",
-      headers: {
-        // This header specifies the type of content we're sending.
-        // This is required for endpoints expecting us to send
-        // JSON data.
-        "Content-Type": "application/json",
-        "Authorization": `Bearer ${token}`
-      },
+        method: "GET",
+        headers: {
+            "Content-Type": "application/json",
+            "Authorization": `Bearer ${token}`
+        },
     };
-  
-    return fetch(apiBaseURL + `/api/posts`, options)
-    .then((response) => {
-      if (!response.ok) {
-        throw new Error('Network response was not ok ' + response.statusText);
-      }
-      return response.json();
-    })
-    .then((profileData) => {
-      // Assuming you want to handle the profile data here
-      console.log(profileData);
-      // For example, you might redirect or update the UI
-      // window.location.assign("../account/profile.html");
-      return profileData;
-    })
-    .catch((error) => {
-      console.error('There was a problem with the fetch operation:', error);
-    });
-  }
 
-  
+    return fetch(apiBaseURL + `/api/posts`, options)
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok ' + response.statusText);
+            }
+            return response.json();
+        })
+        .then(posts => {
+            return posts;
+        })
+        .catch(error => {
+            console.error('There was a problem with the fetch operation:', error);
+        });
+}
+
 // Function to create HTML elements and populate the posts
 function populatePostList(posts) {
     const postList = document.getElementById("postList");
