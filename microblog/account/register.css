@@ -14,7 +14,6 @@ header {
 
 header nav {
   display: flex;
-  justify-content: flex-start; /* Align links to the left */
   align-items: center;
 }
 
@@ -23,10 +22,6 @@ header nav a {
   text-decoration: none;
   font-size: 16px;
   margin-right: 20px; /* Add margin between links */
-}
-
-header nav a:first-child {
-  margin-right: auto; /* Push first link to the left */
 }
 
 header nav a:hover {
@@ -47,6 +42,24 @@ h1 {
   margin-bottom: 20px;
 }
 
+h6 {
+  text-align: center;
+  color: #657786;
+  margin-bottom: 20px;
+}
+
+/* Footer Styles */
+footer {
+  background-color: #1da1f2;
+  color: #ffffff;
+  text-align: center;
+  padding: 10px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+/* Form Styles */
 form {
   display: flex;
   flex-direction: column;
