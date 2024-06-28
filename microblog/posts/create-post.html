@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Post</title>
+    <link rel="stylesheet" href="../global.css">
+    <link rel="stylesheet" href="create-post.css">
+    <script src="../account/auth.js"></script>
+    <script>
+        if (isLoggedIn() === false) {
+            window.location.replace("../account/login.html");
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="../index.html">Home</a>
+            <a href="../account/profile.html">Profile</a>
+            <a href="posts.html">Posts</a>
+            <button onclick="logout()">Logout</button>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Create a New Post</h1>
+        <form id="createPostForm">
+            <div>
+                <label for="postText">Post Text:</label>
+                <textarea id="postText" name="postText" required></textarea>
+            </div>
+            <button type="submit">Create Post</button>
+        </form>
+    </main>
+
+    <footer></footer>
+
+    <script src="create-post.js"></script>
+</body>
+</html>
